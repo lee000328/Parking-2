@@ -1,0 +1,18 @@
+# 파이썬 가상화화
+venv/
+__pycache__/
+
+# 모델파일일
+*.pt
+
+# 훈련결과과
+runs/
+
+# 데이터셋 폴더더
+train/
+valid/
+datasets/
+
+# 시스템 파일
+.DS_Store
+*.log
