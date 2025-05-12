@@ -1,6 +1,6 @@
 # ----------------------
 torch>=1.13
-ultralytics  # YOLOv8용
+ultralytics>=8.0.20  # YOLOv8용
 opencv-python
 numpy
 matplotlib
