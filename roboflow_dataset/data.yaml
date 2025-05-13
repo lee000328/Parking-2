@@ -1,0 +1,13 @@
+train: C:/Parking/roboflow_dataset/train/images
+val: C:/Parking/roboflow_dataset/valid/images
+test: C:/Parking/roboflow_dataset/test/images
+
+nc: 1
+names: ['pillar']
+
+roboflow:
+  workspace: parking-e6bi3
+  project: pillar-1xnmz-hhizv
+  version: 1
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/parking-e6bi3/pillar-1xnmz-hhizv/dataset/1
