@@ -33,3 +33,7 @@
 - roboflow universe 공용 데이터 다운 및 학습
   - main.py 와 infer.py 수정
   - 여전히 sample이미지 테스트 인식 실패
+## 2025-05-14
+- roboflow universe 공용데이터 추가 수집
+  - conf값을 0.1로 낮춘경우 pillar 한개 인식
+  - 계속해서 추가 데이터 학습을 통해 높은 인식도를 목표
