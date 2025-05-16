@@ -1,0 +1,13 @@
+train: C:/Parking/pillar_dataset/train/images
+val: C:/Parking/pillar_dataset/valid/images
+test: C:/Parking/pillar_dataset/test/images
+
+nc: 2
+names: ['pillar', 'wall']
+
+roboflow:
+  workspace: anno-81dfw
+  project: pillar-kcxf1
+  version: 2
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/anno-81dfw/pillar-kcxf1/dataset/2
