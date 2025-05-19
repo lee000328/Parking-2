@@ -9,14 +9,18 @@ from torchvision.ops import nms  # Non-Maximum Suppression
 weight_paths = [
     'weights/best1.pt',
     'weights/best2.pt',
-    'weights/best3.pt'
+    'weights/best3.pt',
+    'weights/best4.pt',
+    'weights/best5.pt',
+    'weights/best6.pt',
+    'weights/best7.pt'
 ]  # 앙상블에 사용할 YOLO 모델 가중치들
 
 # ✅ 2. 각 모델 로딩
 models = [YOLO(w) for w in weight_paths]  # 각 모델 인스턴스 생성
 
 # ✅ 3. 추론할 이미지 로드 및 RGB 변환
-image_path = 'test_images/sample.jpeg'     # 추론할 이미지 경로
+image_path = 'test_images/sample.jpg'     # 추론할 이미지 경로
 img = cv2.imread(image_path)              # BGR 형식으로 이미지 로드
 img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)  # YOLO 모델은 RGB 입력 필요
 
@@ -26,7 +30,7 @@ all_scores = []   # confidence 점수 모음
 all_classes = []  # 클래스 ID 모음
 
 for model in models:
-    results = model.predict(source=img_rgb, conf=0.1, iou=0.45, save=False, verbose=False)
+    results = model.predict(source=img_rgb, conf=0.25, iou=0.45, save=False, verbose=False)
     result = results[0]  # 단일 이미지 예측 결과
 
     # 박스, confidence, 클래스 ID 추출

@@ -42,3 +42,20 @@
   - 기둥인식 실패
   - 빛을 기둥으로 인식/ 학습데이터 검토 및 초기화 후 직접 촬영 혹은 양질의 데이터셋으로 재 학습 예정
   - 앙상블 추론을 통해 학습내용을 공유 문제 발생시 추후 분리예정
+## 2025-05-19
+- 기존데이터 노이즈, 밝기조절등을 이용하여 재학습
+  - 기존학습과 추가 재학습 데이터를 사용
+  - pillar의 인식을 성공, rebar의 학습부족으로 인식실패
+  - 추후 rebar 혹은 자연광등 추가 학습을 통해 건물형과 지하분리예정
+  - 기존 main과 infer의 통합버전인 run.py 생성
+  - 아래 추가코드는 run.py를 터미널에 입력해서 각 제목대로 나옴
+  - main.py와 infer.py또한 기존대로 실행가능
+
+# 시각화 포함 추론
+  python run.py --mode infer --weights weights/best1.pt weights/best2.pt weights/best3.pt weights/best4.pt weights/best5.pt weights/best6.pt weights/best7.pt --image test_images/sample.jpg
+
+# 단순 분류 판단만 수행 (터미널 출력)
+  python run.py --mode classify --weights weights/*.pt --image test_images/sample.jpg
+
+# 시각화 + 저장 + 출력
+  python run.py --mode infer --weights weights/*.pt --image test_images/sample.jpg

@@ -9,6 +9,7 @@ __pycache__/
 runs/
 
 # 데이터셋 폴더더
+weights/
 train/
 valid/
 datasets/

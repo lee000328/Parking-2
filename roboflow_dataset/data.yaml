@@ -1,13 +1,13 @@
-train: C:/Parking/roboflow_dataset/train/images
-val: C:/Parking/roboflow_dataset/valid/images
-test: C:/Parking/roboflow_dataset/test/images
+train: ../train/images
+val: ../valid/images
+test: ../test/images
 
 nc: 1
-names: ['pillar']
+names: ['simu_pillar']
 
 roboflow:
   workspace: parking-e6bi3
-  project: pillar-1xnmz-hhizv
-  version: 1
+  project: simu_pillar-asbmo
+  version: 2
   license: CC BY 4.0
-  url: https://universe.roboflow.com/parking-e6bi3/pillar-1xnmz-hhizv/dataset/1
+  url: https://universe.roboflow.com/parking-e6bi3/simu_pillar-asbmo/dataset/2

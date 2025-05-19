@@ -1,8 +1,8 @@
 
-pillar - v1 2025-05-13 8:38pm
+simu_pillar - v2 2025-05-19 7:01pm
 ==============================
 
-This dataset was exported via roboflow.com on May 13, 2025 at 11:40 AM GMT
+This dataset was exported via roboflow.com on May 19, 2025 at 10:01 AM GMT
 
 Roboflow is an end-to-end computer vision platform that helps you
 * collaborate with your team on computer vision projects
@@ -17,11 +17,17 @@ visit https://github.com/roboflow/notebooks
 
 To find over 100k other datasets and pre-trained models, visit https://universe.roboflow.com
 
-The dataset includes 241 images.
-Pillar are annotated in YOLO v5 PyTorch format.
+The dataset includes 860 images.
+Simu_pillar are annotated in YOLO v5 PyTorch format.
 
 The following pre-processing was applied to each image:
+* Resize to 640x640 (Stretch)
 
-No image augmentation techniques were applied.
+The following augmentation was applied to create 3 versions of each source image:
+* Randomly crop between 0 and 20 percent of the image
+* Random brigthness adjustment of between -25 and +25 percent
+* Random exposure adjustment of between -15 and +15 percent
+* Random Gaussian blur of between 0 and 2.5 pixels
+* Salt and pepper noise was applied to 0.1 percent of pixels
 
 
