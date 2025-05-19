@@ -59,3 +59,6 @@
 
 # 시각화 + 저장 + 출력
   python run.py --mode infer --weights weights/*.pt --image test_images/sample.jpg
+
+# 학습한 데이터 경로
+  https://app.roboflow.com/parking-e6bi3
